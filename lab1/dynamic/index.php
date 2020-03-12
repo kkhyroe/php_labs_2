@@ -14,8 +14,16 @@
                             ?>" class="<?php
                                 echo 'active">Первая страница';
                             ?></a></li>
-                <li><a href="page2.html">Вторая страница</a></li>
-                <li><a href="page3.html">Третья страница</a></li>
+                <li><a href="<?php
+                                echo 'page2.php';
+                            ?>" class="<?php
+                                echo 'deactive">Вторая страница';
+                            ?></a></li>
+                <li><a href="<?php
+                                echo 'page3.php';
+                            ?>" class="<?php
+                                echo 'deactive">Третья страница';
+                            ?></a></li>
             </ul>
         </header>
 
