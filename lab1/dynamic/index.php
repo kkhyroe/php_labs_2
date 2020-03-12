@@ -92,7 +92,7 @@
             <h2>Тема: «Субъективный бабувизм: гипотеза и теории»</h2>
 
             <?php
-                echo '<img class="img" src="fotos/foto'.(date('s-1') % 2+1).'.jpg" alt="Меняющаяся фотография">'; 
+                echo '<img class="img" src="fotos/foto'.(date('s') % 2+1).'.jpg" alt="Меняющаяся фотография">'; 
             ?>
 
             <p>
@@ -138,7 +138,7 @@
         <footer>
             <h3><?php
 
-                echo 'Сформировано '.date($d).'.'.date($m).'.'.date($y).' в '.date($H).'-'.date($i).':'.date($s);
+                echo 'Сформировано '.date('d').'.'.date('m').'.'.date('y').' в '.date('H').'-'.date('i').':'.date('s');
 
             ?></h3>
         </footer>
