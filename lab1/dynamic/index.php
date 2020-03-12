@@ -9,21 +9,60 @@
             <h1>Философия</h1>
 
             <ul>
-                <li><a href="<?php
-                                echo 'index.php';
-                            ?>" class="<?php
-                                echo 'active">Первая страница';
-                            ?></a></li>
-                <li><a href="<?php
-                                echo 'page2.php';
-                            ?>" class="<?php
-                                echo 'deactive">Вторая страница';
-                            ?></a></li>
-                <li><a href="<?php
-                                echo 'page3.php';
-                            ?>" class="<?php
-                                echo 'deactive">Третья страница';
-                            ?></a></li>
+                <li>
+                    <a href="<?php
+
+                        $name='Первая страница';
+                        $link='index.php';
+                        $current_page=true;
+
+                        echo $link;
+
+                    ?>"<?php
+
+                        if( $current_page )
+                            echo ' class="active"';
+                        
+                        echo '>'.$name;
+                    
+                    ?></a>
+                </li>
+                <li>
+                    <a href="<?php
+
+                        $name='Вторая страница';
+                        $link='page2.php';
+                        $current_page=false;
+
+                        echo $link;
+
+                    ?>"<?php
+
+                        if( $current_page )
+                            echo ' class="active"';
+                        
+                        echo '>'.$name;
+                    
+                    ?></a>
+                </li>
+                <li>
+                    <a href="<?php
+
+                        $name='Третья страница';
+                        $link='page3.php';
+                        $current_page=false;
+
+                        echo $link;
+
+                    ?>"<?php
+
+                        if( $current_page )
+                            echo ' class="active"';
+                        
+                        echo '>'.$name;
+                    
+                    ?></a>
+                </li>
             </ul>
         </header>
 
