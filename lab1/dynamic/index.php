@@ -117,20 +117,30 @@
                 ?>
                 <tr>
                     <td><?php
+
                         echo 'Бабувизм';
+
                     ?></td>
                     <td><?php
+
                         echo 'Писания Дюринга';
+
                     ?></td>
                     <td><?php
+
                         echo 'Дедукция';
+
                     ?></td>
                 </tr>
             </table>
         </img>
 
         <footer>
-            
+            <h3><?php
+
+                echo 'Сформировано '.date($d).'.'.date($m).'.'.date($y).' в '.date($H).'-'.date($i).':'.date(%s);
+
+            ?></h3>
         </footer>
     </body>
 </html>
