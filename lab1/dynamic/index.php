@@ -138,7 +138,7 @@
         <footer>
             <h3><?php
 
-                echo 'Сформировано '.date($d).'.'.date($m).'.'.date($y).' в '.date($H).'-'.date($i).':'.date(%s);
+                echo 'Сформировано '.date($d).'.'.date($m).'.'.date($y).' в '.date($H).'-'.date($i).':'.date($s);
 
             ?></h3>
         </footer>
