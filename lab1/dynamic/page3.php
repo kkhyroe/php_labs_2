@@ -1,6 +1,12 @@
 <html>
     <head>
-        <title>Сычев Роман Александрович; 191-322; Лабораторная работа №А-1 Конвертация статического контента в динамический.</title>
+        <title><?php
+            
+            $title='Сычев Роман Александрович; 191-322; Лабораторная работа №А-1 Конвертация статического контента в динамический.';
+
+            echo $title;
+
+        ?></title>
         <link rel="stylesheet" href="style/style.css">
     </head>
 
@@ -9,16 +15,69 @@
             <h1>Философия</h1>
 
             <ul>
-                <li><a href="index.html">Первая страница</a></li>
-                <li><a href="page2.html">Вторая страница</a></li>
-                <li><a href="page3.html" class="active">Третья страница</a></li>
+                <li>
+                    <a href="<?php
+
+                        $name='Первая страница';
+                        $link='index.php';
+                        $current_page=false;
+
+                        echo $link;
+
+                    ?>"<?php
+
+                        if( $current_page )
+                            echo ' class="active"';
+                        
+                        echo '>'.$name;
+                    
+                    ?></a>
+                </li>
+                <li>
+                    <a href="<?php
+
+                        $name='Вторая страница';
+                        $link='page2.php';
+                        $current_page=false;
+
+                        echo $link;
+
+                    ?>"<?php
+
+                        if( $current_page )
+                            echo ' class="active"';
+                        
+                        echo '>'.$name;
+                    
+                    ?></a>
+                </li>
+                <li>
+                    <a href="<?php
+
+                        $name='Третья страница';
+                        $link='page3.php';
+                        $current_page=true;
+
+                        echo $link;
+
+                    ?>"<?php
+
+                        if( $current_page )
+                            echo ' class="active"';
+                        
+                        echo '>'.$name;
+                    
+                    ?></a>
+                </li>
             </ul>
         </header>
 
         <div class="main">
             <h2>Тема: «Сенсибельный позитивизм: гипотеза и теории»</h2>
 
-            <img src="fotos/foto1.jpg" alt='image' class="img">
+            <?php
+                echo '<img class="img" src="fotos/foto'.(date('s') % 2+1).'.jpg" alt="Меняющаяся фотография">'; 
+            ?>
 
             <p>
                 Апостериори, дуализм осмысленно индуцирует сенсибельный язык образов. Ощущение мира амбивалентно индуцирует позитивизм. Суждение, следовательно, непредсказуемо. Гегельянство, по определению, индуцирует мир.
@@ -30,7 +89,9 @@
 
             <h2>Тема: «Дилемма как исчисление предикатов»</h2>
 
-            <img src="fotos/foto2.jpg" alt='image' class="img">
+            <?php
+                echo '<img class="img" src="fotos/foto'.(date('s') % 2+1).'.jpg" alt="Меняющаяся фотография">'; 
+            ?>
 
             <p>
                 Суждение трогательно наивно. Ассоциация философски транспонирует из ряда вон выходящий позитивизм. Сомнение контролирует сложный язык образов.
@@ -43,21 +104,41 @@
             <h2>Таблица</h2>
 
             <table>
+                <?php
+                    
+                    echo '<tr><td>Позитивизм</td>';
+
+                    echo '<td>Дуализм</td>';
+
+                    echo '<td>Гегельянство</td></tr>';
+                
+                ?>
                 <tr>
-                    <td>Позитивизм</td>
-                    <td>Дуализм</td>
-                    <td>Гегельянство</td>
-                </tr>
-                <tr>
-                    <td>Бабувизм</td>
-                    <td>Писания Дюринга</td>
-                    <td>Дедукция</td>
+                    <td><?php
+
+                        echo 'Бабувизм';
+
+                    ?></td>
+                    <td><?php
+
+                        echo 'Писания Дюринга';
+
+                    ?></td>
+                    <td><?php
+
+                        echo 'Дедукция';
+
+                    ?></td>
                 </tr>
             </table>
-        </div>
+        </img>
 
         <footer>
-            
+            <h3><?php
+
+                echo 'Сформировано '.date('d').'.'.date('m').'.'.date('y').' в '.date('H').'-'.date('i').':'.date('s');
+
+            ?></h3>
         </footer>
     </body>
 </html>
