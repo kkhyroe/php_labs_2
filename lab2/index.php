@@ -14,7 +14,7 @@
             $type = 'A';
 
             $min_value = 10;
-            $max_value = 20;
+            $max_value = 20;    
 
             if( $step == 'B' )
                 echo '<ul>';
