@@ -21,7 +21,7 @@
                 $x = -10;
                 $encounting = 10000;
                 $step = 2;
-                $type = 'E';
+                $type = 'D';
 
                 if( $type == 'B' )
                     echo '<ul>';
@@ -33,9 +33,9 @@
                 {
                     echo '<table>';
                     echo '<tr>';
-                    echo '<td>Номер строки</td>';
-                    echo '<td>Значения аргументов</td>';
-                    echo '<td>Значения функции</td>';
+                    echo '<td style="border: 1px solid black;">Номер строки</td>';
+                    echo '<td style="border: 1px solid black;">Значения аргументов</td>';
+                    echo '<td style="border: 1px solid black;">Значения функции</td>';
                     echo '</tr>';
                 }
 
@@ -71,15 +71,20 @@
                     {
                         $n = $i + 1;
                         echo '<tr>';
-                        echo '<td>'.$n.'</td>';
-                        echo '<td>x='.$x.'</td>';
-                        echo '<td>x='.$f.'</td>';
+                        echo '<td style="border: 1px solid black;">'.$n.'</td>';
+                        echo '<td style="border: 1px solid black;">x='.$x.'</td>';
+                        echo '<td style="border: 1px solid black;">f='.$f.'</td>';
                         echo '</tr>';
                     }
                     else
                     if( $type == 'E' )
                     {
-                        echo '<div style="display: inline-block; border: 2px solid red; margin: 4px;">';
+                        echo '<div style="
+                                        display: inline-block; 
+                                        float: left; 
+                                        border: 2px solid red;
+                                        margin: 4px;
+                                ">';
                         echo 'f('.$x.')='.$f;
                         echo '</div>';
                     }

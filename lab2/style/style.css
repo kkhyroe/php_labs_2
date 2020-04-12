@@ -51,10 +51,6 @@ main {
     padding-top: 80px;
     padding-bottom: 80px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    
-
 }
 
 footer {
@@ -70,9 +66,4 @@ footer {
     
     background-color: whitesmoke;
     color: darkgray;
-}
-
-td {
-    padding: 16px;
-    border: 1px solid black;
 }
