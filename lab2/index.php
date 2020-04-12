@@ -15,50 +15,84 @@
 
         <main>
             <?php
-                $min_value=10; // минимальное значение, останавливающее вычисления
-                $max_value=20;
+                $min_value=-100;
+                $max_value=200;
 
-                $x = -10; // начальное значение аргумента
-                $encounting = 10000; // количество вычисляемых значений
-                $step = 2; // шаг изменения аргумента
-                $type = 'A'; // тип верстки
+                $x = -10;
+                $encounting = 10000;
+                $step = 2;
+                $type = 'E';
 
-                if( $type == 'B' ) // если тип верстки В
-                    echo '<ul>'; // начинаем список
-
-                // цикл с заданным количеством итераций
-                for( $i=0; $i < $encounting; $i++, $x+=$step )
+                if( $type == 'B' )
+                    echo '<ul>';
+                else
+                if( $type == 'C' )
+                    echo '<ol>';
+                else
+                if( $type == 'D' )
                 {
-                    if( $x <= 10 ) // если аргумент меньше или равен 10
-                        $f = 32*x / 21; // вычисляем функцию
-                    else // иначе
-                    if( $x <20 ) // если аргумент меньше 20
-                        $f = x*x/3 + 7/(x-4); // вычисляем функцию
-                    else // иначе
-                    {
-                        if( x == 22 ) // если аргумент равен 22
-                            $f= 'error'; // не вычисляем функцию
-                        else // иначе
-                            $f = ( 1 / (x-22) )*2 + x; // вычисляем функцию
-                    }
-                    if( $type == 'A' ) // если тип верстки А
-                    {
-                        echo 'f('.$x.')='.$f; // выводим аргумент и значение функции
-                        if( $i < $encounting-1 ) // если это не последняя итерация цикла
-                            echo '<br>'; // выводим знак перевода строки
-                    }
-                    else // иначе
-                    if( $type == 'B' ) // если тип верстки В    
-                    {
-                        // выводим данные как пункт списка
-                        echo '<li>f('. $x.')='.$f.'</li>';
-                    }
-                    if( $f>=$max_value || $f<$min_value ) // если вышли за рамки диапазона
-                        break;
+                    echo '<table>';
+                    echo '<tr>';
+                    echo '<td>Номер строки</td>';
+                    echo '<td>Значения аргументов</td>';
+                    echo '<td>Значения функции</td>';
+                    echo '</tr>';
                 }
 
-                if( $type == 'B' ) // если тип верстки В
-                    echo '</ul>'; // закрываем тег списка
+                for( $i=0; $i < $encounting; $i++, $x+=$step )
+                {
+                    if( $x <= 10 )
+                        $f = 32*x / 21;
+                    else 
+                    if( $x <20 ) 
+                        $f = x*x/3 + 7/(x-4);
+                    else
+                    {
+                        if( x == 22 )
+                            $f= 'error';
+                        else
+                            $f = ( 1 / (x-22) )*2 + x;
+                    }
+                    if( $f>=$max_value || $f<$min_value )
+                        break;
+                    if( $type == 'A' )
+                    {
+                        echo 'f('.$x.')='.$f;
+                        if( $i < $encounting-1 )
+                            echo '<br>';
+                    }
+                    else
+                    if( $type == 'B' || $type == 'C')
+                    {
+                        echo '<li>f('. $x.')='.$f.'</li>';
+                    }
+                    else
+                    if( $type == 'D' )
+                    {
+                        $n = $i + 1;
+                        echo '<tr>';
+                        echo '<td>'.$n.'</td>';
+                        echo '<td>x='.$x.'</td>';
+                        echo '<td>x='.$f.'</td>';
+                        echo '</tr>';
+                    }
+                    else
+                    if( $type == 'E' )
+                    {
+                        echo '<div style="display: inline-block; border: 2px solid red; margin: 4px;">';
+                        echo 'f('.$x.')='.$f;
+                        echo '</div>';
+                    }
+                }
+
+                if( $type == 'B' )
+                    echo '</ol>';
+                else
+                if( $type == 'C' )
+                    echo '<ul>';
+                else
+                if( $type == 'D' )
+                    echo '</table>';
             ?>
         </main>
                 
