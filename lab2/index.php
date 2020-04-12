@@ -2,7 +2,6 @@
     <head>
         <title>Сычев Роман Александрович; 191-322; Лабораторная работа №А-2</title>
         <link rel="stylesheet" href="style/style.css">
-        <meta charset="utf-8">
     </head>
 
     <body>
@@ -62,7 +61,7 @@
                     echo '</ul>'; // закрываем тег списка
             ?>
         </main>
-
+                
         <footer>
             
         </footer>
