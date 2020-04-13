@@ -18,10 +18,10 @@
                 $min_value=-100;
                 $max_value=200;
 
-                $maximum = $min_value
-                $minimum = $max_value
-                $middle = 0
-                $sum = 0
+                $maximum = $min_value;
+                $minimum = $max_value;
+                $middle = 0;
+                $sum = 0;
 
                 $x = -10;
                 $encounting = 10000;
@@ -48,27 +48,31 @@
                 for( $i=0; $i < $encounting; $i++, $x+=$step )
                 {
                     if( $x <= 10 )
-                        $f = 32*x / 21;
+                        $f = 32*$x / 21;
                     else 
                     if( $x <20 ) 
-                        $f = x*x/3 + 7/(x-4);
+                        $f = $x*$x/3 + 7/($x-4);
                     else
                     {
-                        if( x == 22 )
+                        if( $x == 22 )
                             $f= 'error';
                         else
-                            $f = ( 1 / (x-22) )*2 + x;
+                            $f = ( 1 / ($x-22) )*2 + $x;
                     }
 
                     if( $f>=$max_value || $f<$min_value )
                         break;
-
-                    if( $f >= $maximum )
-                        $maximum = $f
-                    if( $f <= $minimum )
-                        $minimum = $f
-                    $sum = $sum + $f
-                    $k = $i
+                    
+                    if( $f != 'error' )
+                    {
+                        if( $f >= $maximum )
+                            $maximum = $f;
+                        if( $f <= $minimum )
+                            $minimum = $f;
+                        $sum = $sum + $f;
+                        $k = $i;
+                        $f = round($f, 2);
+                    }
 
                     switch ($type) {
                         case 'A':
@@ -98,7 +102,7 @@
                     }
                 }
 
-                switch ($variable) {
+                switch ($type) {
                     case 'B':
                         echo '</ol>';
                         break;
@@ -114,10 +118,10 @@
                 
         <footer>
             <?php 
-                echo 'Максимум — '.$maximum;
-                echo 'Минимум — '.$minimum;
-                echo 'Среднее значение — '.$sum/$k;
-                echo 'Сумма — '.$sum;
+                echo 'Максимум — '.round($maximum, 2).'  ';
+                echo 'Минимум — '.round($minimum, 2).'  ';
+                echo 'Среднее значение — '.round($sum/$k, 2).'  ';
+                echo 'Сумма — '.round($sum, 2);
             ?>
         </footer>
     </body>

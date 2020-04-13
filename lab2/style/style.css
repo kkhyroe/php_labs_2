@@ -23,30 +23,6 @@ header img {
     height: inherit;
 }
 
-ul {
-    list-style: none;
-}
-
-ul li {
-    display: inline-block;
-}
-
-ul a {
-    padding: 32px;
-    color: white;
-    font-size: 16px;
-}
-
-ul a:hover {
-    color: wheat;
-    background-color: seagreen;
-    transition: 1s;
-}
-
-ul a.active {
-    background-color: seagreen;
-}
-
 main {
     padding-top: 80px;
     padding-bottom: 80px;
