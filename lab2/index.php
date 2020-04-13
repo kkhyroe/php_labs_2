@@ -15,8 +15,8 @@
 
         <main>
             <?php
-                $min_value=-100;
-                $max_value=200;
+                $min_value=-10000   ;
+                $max_value=10000;
 
                 $maximum = $min_value;
                 $minimum = $max_value;
@@ -25,7 +25,7 @@
 
                 $x = -10;
                 $encounting = 10000;
-                $step = 2;
+                $step = 2;  
                 $type = 'D';
 
                 switch ($type) {
@@ -47,18 +47,16 @@
 
                 for( $i=0; $i < $encounting; $i++, $x+=$step )
                 {
+                    if( $x == 0 )
+                        continue;
+                    else
                     if( $x <= 10 )
-                        $f = 32*$x / 21;
+                        $f = 3/$x + $x/3 - 5;
                     else 
                     if( $x <20 ) 
-                        $f = $x*$x/3 + 7/($x-4);
+                        $f = ($x-7)*($x/8);
                     else
-                    {
-                        if( $x == 22 )
-                            $f= 'error';
-                        else
-                            $f = ( 1 / ($x-22) )*2 + $x;
-                    }
+                    $f = 3*$x + 2;
 
                     if( $f>=$max_value || $f<$min_value )
                         break;
