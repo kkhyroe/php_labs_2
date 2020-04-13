@@ -67,3 +67,13 @@ footer {
     background-color: whitesmoke;
     color: darkgray;
 }
+
+td {
+    border: 1px solid black;
+}
+
+.dive {
+    display: inline-block; 
+    border: 2px solid red;
+    margin: 4px;
+}

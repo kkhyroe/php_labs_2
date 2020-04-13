@@ -18,25 +18,31 @@
                 $min_value=-100;
                 $max_value=200;
 
+                $maximum = $min_value
+                $minimum = $max_value
+                $middle = 0
+                $sum = 0
+
                 $x = -10;
                 $encounting = 10000;
                 $step = 2;
                 $type = 'D';
 
-                if( $type == 'B' )
-                    echo '<ul>';
-                else
-                if( $type == 'C' )
-                    echo '<ol>';
-                else
-                if( $type == 'D' )
-                {
-                    echo '<table>';
-                    echo '<tr>';
-                    echo '<td style="border: 1px solid black;">Номер строки</td>';
-                    echo '<td style="border: 1px solid black;">Значения аргументов</td>';
-                    echo '<td style="border: 1px solid black;">Значения функции</td>';
-                    echo '</tr>';
+                switch ($type) {
+                    case 'B':
+                        echo '<ul>';
+                        break;
+                    case 'C':
+                        echo '<ol>';
+                        break;
+                    case 'D':
+                        echo '<table>';
+                        echo '<tr>';
+                        echo '<td>Номер строки</td>';
+                        echo '<td>Значения аргументов</td>';
+                        echo '<td>Значения функции</td>';
+                        echo '</tr>';
+                        break;
                 }
 
                 for( $i=0; $i < $encounting; $i++, $x+=$step )
@@ -53,56 +59,65 @@
                         else
                             $f = ( 1 / (x-22) )*2 + x;
                     }
+
                     if( $f>=$max_value || $f<$min_value )
                         break;
-                    if( $type == 'A' )
-                    {
-                        echo 'f('.$x.')='.$f;
-                        if( $i < $encounting-1 )
-                            echo '<br>';
-                    }
-                    else
-                    if( $type == 'B' || $type == 'C')
-                    {
-                        echo '<li>f('. $x.')='.$f.'</li>';
-                    }
-                    else
-                    if( $type == 'D' )
-                    {
-                        $n = $i + 1;
-                        echo '<tr>';
-                        echo '<td style="border: 1px solid black;">'.$n.'</td>';
-                        echo '<td style="border: 1px solid black;">x='.$x.'</td>';
-                        echo '<td style="border: 1px solid black;">f='.$f.'</td>';
-                        echo '</tr>';
-                    }
-                    else
-                    if( $type == 'E' )
-                    {
-                        echo '<div style="
-                                        display: inline-block; 
-                                        float: left; 
-                                        border: 2px solid red;
-                                        margin: 4px;
-                                ">';
-                        echo 'f('.$x.')='.$f;
-                        echo '</div>';
+
+                    if( $f >= $maximum )
+                        $maximum = $f
+                    if( $f <= $minimum )
+                        $minimum = $f
+                    $sum = $sum + $f
+                    $k = $i
+
+                    switch ($type) {
+                        case 'A':
+                            echo 'f('.$x.')='.$f;
+                            if( $i < $encounting-1 )
+                                echo '<br>';
+                            break;
+                        case 'B':
+                            echo '<li>f('. $x.')='.$f.'</li>';
+                            break;
+                        case 'C':
+                            echo '<li>f('. $x.')='.$f.'</li>';
+                            break;
+                        case 'D':
+                            $n = $i + 1;
+                            echo '<tr>';
+                            echo '<td>'.$n.'</td>';
+                            echo '<td>x='.$x.'</td>';
+                            echo '<td>f='.$f.'</td>';
+                            echo '</tr>';
+                            break;
+                        case 'E':
+                            echo '<div class="dive">';
+                            echo 'f('.$x.')='.$f;
+                            echo '</div>';
+                            break;
                     }
                 }
 
-                if( $type == 'B' )
-                    echo '</ol>';
-                else
-                if( $type == 'C' )
-                    echo '<ul>';
-                else
-                if( $type == 'D' )
-                    echo '</table>';
+                switch ($variable) {
+                    case 'B':
+                        echo '</ol>';
+                        break;
+                    case 'C':
+                        echo '<ul>';
+                        break;
+                    case 'D':
+                        echo '</table>';
+                        break;
+                }   
             ?>
         </main>
                 
         <footer>
-            
+            <?php 
+                echo 'Максимум — '.$maximum;
+                echo 'Минимум — '.$minimum;
+                echo 'Среднее значение — '.$sum/$k;
+                echo 'Сумма — '.$sum;
         </footer>
     </body>
 </html>
