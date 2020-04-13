@@ -118,6 +118,7 @@
                 echo 'Минимум — '.$minimum;
                 echo 'Среднее значение — '.$sum/$k;
                 echo 'Сумма — '.$sum;
+            ?>
         </footer>
     </body>
 </html>
