@@ -1,0 +1,86 @@
+body{
+	font-family: 'Playfair Display', serif;
+	padding:0;
+	margin: 0; 
+	height: 100%;
+    background-color: #dfdee1;
+}
+.header{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 10%;
+	width: 100%;
+	background-color: #67c7f1;
+}
+.header img{
+	width: 300px;
+
+}
+.name{
+color: #222565;
+text-align: center;
+padding-top: 12px;
+}
+main{
+
+	 position: relative;
+  min-height: 100%;
+}
+
+.calc {
+    width: 316px;
+}
+
+.calc div {
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    height: 43px;
+    background: #fff;
+    border: 1px solid #263238;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.calc a {
+    display: inline-block;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    padding: 10px 0;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #9E9E9E;
+
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.calc a:hover {
+    background: #a9a9a9;
+}
+
+.calc a:active {
+    background: #7d7d7d;
+    box-shadow: unset;
+}
+
+.calc a:last-child {
+    margin: 10px 0 0;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.foot{
+	background-color: #67c7f1;
+	position: fixed;
+    left: 0; 
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}

@@ -1,0 +1,110 @@
+a{
+    text-decoration: none;
+}
+.title {
+    text-align: center !important;
+}
+
+.menu {
+    margin-left: 15px;
+    text-align: right;
+    display: flex;
+}
+
+.menu a {
+    display: inline-block;
+    color: white;
+    background: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    padding: 10px;
+    text-decoration: none;
+
+    transition: 0.2s linear;
+}
+
+.menu a.active, .menu a:hover {
+    color: #212121;
+    background: rgb(255, 255, 255);
+}
+
+main .left {
+    height: 100%;
+    background: #87CEFA;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .left a {
+    width: 80px;
+    padding: 10px 0;
+
+    text-align: center;
+
+    background: #191970;
+    color: #fff;
+    text-decoration: none;
+
+    transition: 0.2s linear;
+}
+
+main .left a:hover, main .left a.active {
+    background: #0000CD;
+}
+
+main .right {
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    height: 100%;
+    margin-left:-1px;
+    margin-top:-1px;
+    font-size: 24px;
+text-align: center;
+
+}
+td{border-style: solid;
+border-width: 1px 1px 1px 0;
+border-color: white;}
+tbody tr:nth-child(even) {
+    background: #f0f0f0; /* Зебра */
+   }
+.table .row {
+    display: flex;
+}
+
+
+.table .row:nth-child(2n+1) {
+    background: #B0E0E6;
+}
+
+.table .data {
+    flex: 1;
+    padding: 5px;
+    margin-left: -1px;
+    text-align: center;
+}
+
+.table a {
+    font-weight: bold;
+    color: #263238;
+
+    transition: 0.2s linear;
+}
+
+.table a:hover {
+    color: #212121;
+}
+
+footer .flex{
+    justify-content: space-around;
+}
+
+
