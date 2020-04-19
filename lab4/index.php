@@ -65,7 +65,7 @@
 
         <footer>
             <?php
-                echo 'Установленное количество колонок: ' . $tdcount . '<br>';
+                echo 'Количество колонок: ' . $tdcount . '<br>';
             ?>
         </footer>
     </body>
