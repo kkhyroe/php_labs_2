@@ -13,37 +13,31 @@
 
     <form>
         <div>
-            <span>Вопрос 1</span>
             <h2>Вопрос</h2>
-            <input type="number" required>
+            <input type="number" name="number" id="number" required>
         </div>  
         <div>
-            <span>Вопрос 2</span>
             <h2>Вопрос</h2>
-            <input type="number" min="0" required>
+            <input type="number" name="numberpos" id="numberpos" min="0" required>
         </div> 
         <div>
-            <span>Вопрос 3</span>
             <h2>Вопрос</h2>
-            <input type="text" minlength="1" maxlength="30" required>
+            <input type="text" name="text" id="text" minlength="1" maxlength="30" required>
         </div> 
         <div>
-            <span>Вопрос 4</span>
             <h2>Вопрос</h2>
-            <textarea minlength="1" maxlength="255" required></textarea>
+            <textarea name="textarea" id="textarea" minlength="1" maxlength="255" required></textarea>
         </div> 
         <div>
-            <span>Вопрос 5</span>
             <h2>Вопрос</h2>
-            <input type="radio" checked>
-            <input type="radio">
+            <input type="radio" name="radio" id="radio1" checked>
+            <input type="radio" name="radio" id="radio2">
         </div> 
         <div>
-            <span>Вопрос 6</span>
             <h2>Вопрос</h2>
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
+            <input type="checkbox" name="check" id="check1">
+            <input type="checkbox" name="check" id="check2">
+            <input type="checkbox" name="check" id="check3">
         </div>
         <input type="submit">
     </form>
