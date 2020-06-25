@@ -44,9 +44,9 @@
     <?php
         if (isset($_REQUEST['delsession'])) {
             $db_host = "localhost"; 
-            $db_user = "root"; // Логин БД
+            $db_user = "std_917"; // Логин БД
             $db_password = "roma1488chne";
-            $db_base = 'phpexam'; // Имя БД
+            $db_base = 'std_917'; // Имя БД
             $db_table = "expert"; // Имя Таблицы БД
             $id = session_id();
             $id = (string) $id;
@@ -66,9 +66,9 @@
     <?php
         if (isset($_REQUEST['results'])) {
             $db_host = "localhost"; 
-            $db_user = "root"; // Логин БД
+            $db_user = "std_917"; // Логин БД
             $db_password = "roma1488chne";
-            $db_base = 'phpexam'; // Имя БД
+            $db_base = 'std_917'; // Имя БД
             $db_table = "expert"; // Имя Таблицы БД
             $id = session_id();
             $id = (string) $id;
@@ -149,9 +149,9 @@
         $ip = (string)$ip;
 
         $db_host = "localhost"; 
-        $db_user = "root"; // Логин БД
+        $db_user = "std_917"; // Логин БД
         $db_password = "roma1488chne";
-        $db_base = 'phpexam'; // Имя БД
+        $db_base = 'std_917'; // Имя БД
         $db_table = "expert"; // Имя Таблицы БД
 
         $mysqli = new mysqli($db_host,$db_user, $db_password, $db_base);
